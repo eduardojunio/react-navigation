@@ -177,6 +177,8 @@ class TabView extends React.PureComponent<Props> {
 
     let renderHeader;
     let renderFooter;
+    let renderLeftSide;
+    let renderRightSide;
     let renderPager;
 
     const { state } = this.props.navigation;
@@ -194,10 +196,18 @@ class TabView extends React.PureComponent<Props> {
         : options.swipeEnabled;
 
     if (tabBarComponent !== undefined && tabBarVisible) {
-      if (tabBarPosition === 'bottom') {
-        renderFooter = this._renderTabBar;
-      } else {
-        renderHeader = this._renderTabBar;
+      switch (tabBarPosition) {
+        case 'bottom':
+          renderFooter = this._renderTabBar;
+          break;
+        case 'left':
+          renderLeftSide = this._renderTabBar;
+          break;
+        case 'right':
+          renderRightSide = this._renderTabBar;
+          break;
+        default:
+          renderHeader = this._renderTabBar;
       }
     }
 
@@ -216,6 +226,8 @@ class TabView extends React.PureComponent<Props> {
       renderPager,
       renderHeader,
       renderFooter,
+      renderLeftSide,
+      renderRightSide,
       renderScene: this._renderScene,
       onIndexChange: this._handlePageChanged,
       navigationState: this.props.navigation.state,

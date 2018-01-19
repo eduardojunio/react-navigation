@@ -84,7 +84,7 @@ The route configs object is a mapping from route name to a route config, which t
 - `tabBarComponent` - Component to use as the tab bar, e.g. `TabBarBottom`
 (this is the default on iOS), `TabBarTop`
 (this is the default on Android).
-- `tabBarPosition` - Position of the tab bar, can be `'top'` or `'bottom'`.
+- `tabBarPosition` - Position of the tab bar, can be `'top'`, `'left'`, `'right'` or `'bottom'`.
 - `swipeEnabled` - Whether to allow swiping between tabs.
 - `animationEnabled` - Whether to animate when changing tabs.
 - `configureTransition` - a function that, given `currentTransitionProps` and `nextTransitionProps`, returns a configuration object that describes the animation between tabs.
