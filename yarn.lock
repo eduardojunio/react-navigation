@@ -4490,7 +4490,7 @@ react-native-drawer-layout@1.3.2:
 
 "react-native-tab-view@https://github.com/eduardojunio/react-native-tab-view.git":
   version "0.0.74"
-  resolved "https://github.com/eduardojunio/react-native-tab-view.git#dcbda3fab9a16d07d8be1c3fb7fd0b00eefacd9f"
+  resolved "https://github.com/eduardojunio/react-native-tab-view.git#0653bf83de8a159ef0374ce2a9b39ef59f554c52"
   dependencies:
     prop-types "^15.6.0"
 
